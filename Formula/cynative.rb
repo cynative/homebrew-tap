@@ -1,7 +1,7 @@
 class Cynative < Formula
   desc "Agentic security research across your code, cloud, and runtime (read-only)"
   homepage "https://github.com/cynative/cynative"
-  version "1.9.2"
+  version "1.9.3"
   license "Apache-2.0"
 
   on_macos do
@@ -13,24 +13,24 @@ class Cynative < Formula
 
     on_arm do
       url "https://github.com/cynative/cynative/releases/download/v#{version}/cynative_Darwin_arm64.tar.gz"
-      sha256 "207efd60bdde681e86e08d85ca6f871c4cb785a1c278db9b34386814c5449520"
+      sha256 "7906a15ac45ec368d59189c4522018206ec0b78d7eb51c398e54c3716205244f"
     end
 
     on_intel do
       url "https://github.com/cynative/cynative/releases/download/v#{version}/cynative_Darwin_x86_64.tar.gz"
-      sha256 "8c55a9b2fdd5dc9b41fc3e83a4855cd8f54caab504112cb0812b5a1a77802819"
+      sha256 "7d0081bc66fa6a8ef1ec7e2daa4b70c955b09e7116e63328574885f62b871a31"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/cynative/cynative/releases/download/v#{version}/cynative_Linux_arm64.tar.gz"
-      sha256 "01e071314eeb1c1f469df318c04e11079b1ee17a39f9d5ceb49fe6b5d90d1707"
+      sha256 "53c211b15cf5029af9dd71f28e9b728ed77b9ddfb70fe744fd467baab8db84de"
     end
 
     on_intel do
       url "https://github.com/cynative/cynative/releases/download/v#{version}/cynative_Linux_x86_64.tar.gz"
-      sha256 "fe9ee877551bb628ebe897048800d36db8972edf61df6d0d2d8a80e5ad0f97bb"
+      sha256 "f65fb0529608fac72e9195ae99ed35e58d84cd8bd4a383c6fdc36ed1a59b5e9c"
     end
   end
 
