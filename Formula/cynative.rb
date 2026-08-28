@@ -1,36 +1,36 @@
 class Cynative < Formula
   desc "Agentic security research across your code, cloud, and runtime (read-only)"
   homepage "https://github.com/cynative/cynative"
-  version "1.10.0"
+  version "1.10.1"
   license "Apache-2.0"
 
   on_macos do
-    # cynative is built with Go 1.26, whose macOS floor is 12 (Monterey), so gate
+    # cynative is built with Go 1.27, whose macOS floor is 13 (Ventura), so gate
     # installs there — unsupported hosts fail before downloading an unrunnable binary.
-    # A bare symbol means ">= that release"; the ">= :monterey" string form is
+    # A bare symbol means ">= that release"; the ">= :ventura" string form is
     # deprecated and errors on current brew ("unknown or unsupported macOS version").
-    depends_on macos: :monterey
+    depends_on macos: :ventura
 
     on_arm do
       url "https://github.com/cynative/cynative/releases/download/v#{version}/cynative_Darwin_arm64.tar.gz"
-      sha256 "1a5a8b1d5cda6dc909f125cf74495b08ec653309482c6f17294de36458059929"
+      sha256 "5ca6a7a09a1b4cbbd0f9a9207beae80113161def7d88aac2290aa21bfd38731c"
     end
 
     on_intel do
       url "https://github.com/cynative/cynative/releases/download/v#{version}/cynative_Darwin_x86_64.tar.gz"
-      sha256 "cbc91ca455bb9ff5e76e3a520ae1c7373ffdc5b9d60b8ec3a8aa8127055608ec"
+      sha256 "ed7d7b0a2db0668467f514b960448b0e03a395dd2e9957e64f5685901e7de43b"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/cynative/cynative/releases/download/v#{version}/cynative_Linux_arm64.tar.gz"
-      sha256 "9466079b2d901ad4680c2dd09c2132f718bed9906de8005c38b55f9b9dc55a09"
+      sha256 "8e72f4a3f670a6f4ec3c73e16e0c77bba1f0a2d67f99eed1c2091bc2b43ea736"
     end
 
     on_intel do
       url "https://github.com/cynative/cynative/releases/download/v#{version}/cynative_Linux_x86_64.tar.gz"
-      sha256 "9f334e92321547006a7d5105e97a59faecb8e94a6e27120e455ffaf02fa05db6"
+      sha256 "ab212af58bce7e9d5b83647557a61dbd5a2a4a5d39f1dab34f2cff48f15b1dad"
     end
   end
 
